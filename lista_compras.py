@@ -14,11 +14,11 @@ while True :
             else :  print ('\n ',lista, '\n')
 
 
-    elif entrada == ('2') : 
+    elif entrada == ('2'): 
         print ('\n',lista)
 
 
-    elif entrada == ('3') : 
+    elif entrada == ('3'): 
         print ('\n',lista)
         while True: 
             excluir_elemento = input('selecione o item que deseja apagar ou saia desta opcao com "-".\n')
