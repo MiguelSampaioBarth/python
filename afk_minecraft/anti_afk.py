@@ -5,27 +5,7 @@ import random
 
 escolha = input('escolha a opção:\n1 = FOLHAS\nDigite qualquer outra coisa para CAVERNA.')
 
-time.sleep(3) #tempo de espera.
-
-# ADICIONAR : CLICK ALEATORIO
-
-# numeros QUASE aleatório
-num1 = random.randint(1,69)
-num2 = random.randint(1,89)
-
-x = random.randint(1, 2)  
-y = random.randint(1, 2)
-tempo_aleatorio = random.randint(280,340) # tempo parado
-cliques_aleatorios = random.randint(1,5) # numero de cliques 
-
-
-numero1 = (1 + (num1/100) + (num2/100) + (num2/100))/(1 + (num1/100))
-numero2 = numero1/3
-numero3 = numero1/4
-numero4 = numero1/5
-numero5 = numero1/6
-numero6 = numero1/12
-numero7 = numero1/13
+time.sleep(3) #tempo de espera para iniciar a ação.
 
 def calmo () :
    
@@ -86,7 +66,7 @@ def apressado () :
 
     if x == y :
         pyautogui.click(clicks=1)
-
+    
     time.sleep(numero4)
     pyautogui.keyUp('s')
     time.sleep(numero5)
@@ -94,7 +74,27 @@ def apressado () :
     time.sleep(numero3)
 
 while 1 :
-    time.sleep(4)
+
+    num1 = random.randint(1,69)
+    num2 = random.randint(1,89)
+
+    numero1 = (1 + (num1/100) + (num2/100) + (num2/100))/(1 + (num1/100))
+    numero2 = numero1/3
+    numero3 = numero1/4
+    numero4 = numero1/5
+    numero5 = numero1/6
+    numero6 = numero1/12
+    numero7 = numero1/13
+
+    tempo = random.randint(240,330) # tempo parado --------------------IMPORTANTE-------------------
+    tempo_aleatorio = tempo + numero1
+
+    cliques_aleatorios = random.randint(1,5) # numero de cliques
+
+    x = random.randint(1, 4)  
+    y = random.randint(1, 5)    
+
+    time.sleep(tempo_aleatorio)
         
     if escolha == '1' :
         apressado()
@@ -104,6 +104,6 @@ while 1 :
             apressado()
             continue
         else :
-            apressado()
+            calmo()
             continue
         
